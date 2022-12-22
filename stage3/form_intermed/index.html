@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Staatliches&display=swap" rel="stylesheet"> 
+  <title>Agende Sua Mentoria</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="page">
+    <header>
+      <div class="heading-wrapper">
+        <h1>Mentoria</h1>
+        <h2>Preencha o formulário abaixo para agendar sua mentoria</h2>
+      </div>
+    </header>
+  
+    <form id="main-form">
+      <fieldset>
+        <legend>Informações pessoais</legend>
+        
+        <div class="nome-completo">
+          <div class="nome">
+            <label for="input-name">Nome</label>
+            <input type="text" id="input-name" required>
+          </div>
+          
+          <div class="sobrenome">
+            <label for="input-sobrenome">Sobrenome</label>
+            <input type="text" id="input-sobrenome" required>
+          </div>
+        </div>
+  
+        
+        <div class="input-wrapper">
+          <label for="input-email">E-mail <span class="observacao">(digite um e-mail válido)</span></label>
+          <input type="email" id="input-email" required>
+        </div>
+  
+        <div class="input-wrapper">
+          <label for="input-senha">Senha <span></span><span class="observacao">(mínimo de 6 caracteres)</span></label>
+          <input class="sem-margem-inferior" type="password" id="input-senha" minlength="6" required>
+        </div>
+      </fieldset>
+  
+      <fieldset>
+        <legend>Informações do mentor</legend>
+        <div class="input-wrapper">
+          <label for="input-nome-mentor">Nome do seu mentor <span class="observacao">(só o primeiro nome)</span></label>
+          <input class="sem-margem-inferior" type="text" id="input-nome-mentor" required>
+        </div>
+      </fieldset>
+  
+      <fieldset>
+        <legend>Seus horários disponíveis</legend>
+        <div class="horarios-disponiveis">
+          <div id="mento1">
+            <div class="input-wrapper input-wrapper-data">
+              <label for="input-data1">Data <span>(DD/MM/AAAA)</span></label>
+              <input type="date" id="input-data1" required>
+            </div>
+  
+            <div class="input-wrapper input-horario-das">
+              <label for="input-horario-das1">Das</label>
+              <input type="time" id="input-horario-das1" required>
+            </div>
+  
+            <div class="input-wrapper input-horario-ate">
+              <label for="input-horario-ate1">Até</label>
+              <input type="time" id="input-horario-ate1" required>
+            </div>
+          </div>
+          
+          <div id="mento2">
+            <div class="input-wrapper input-wrapper-data sem-margem-inferior">
+              <label for="input-data2">Data <span>(DD/MM/AAAA)</span></label>
+              <input type="date" id="input-data2" required>
+            </div>
+  
+            <div class="input-wrapper input-horario-das sem-margem-inferior">
+              <label for="input-horario-das2">Das</label>
+              <input type="time" id="input-horario-das2" required>
+            </div>
+  
+            <div class="input-wrapper input-horario-ate sem-margem-inferior" id="input-wrapper-horario-ate2">
+              <label for="input-horario-ate2">Até</label>
+              <input type="time" id="input-horario-ate2" required>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  
+    <footer>
+      <button form="main-form">Salvar</button>
+    </footer>
+  </div>
+</body>
+</html>
