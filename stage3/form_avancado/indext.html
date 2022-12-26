@@ -22,37 +22,37 @@
     </div>
   </header>
   <form id="main-form">
-    <fieldset>
+    <fieldset id="personal-info">
       <div id="form-header">
-        <legend>Informações pessoais</legend>
+        <legend class="form-legend">Informações pessoais</legend>
       </div>
 
       <div class="fieldset-elements">
         <div class="full-name">
           <div class="input-wrapper">
             <label for="name-input">Nome</label>
-            <input type="text" id="name-input">
+            <input type="text" id="name-input" required>
           </div>
           <div class="input-wrapper">
             <label for="last-name-input">Sobrenome</label>
-            <input type="text" id="last-name-input">
+            <input type="text" id="last-name-input" required>
           </div>
         </div>
   
         <div class="input-wrapper">
           <label for="email-input">E-mail <span class="note">(insira um e-mail válido)</span></label>
-          <input type="text" id="email-input">
+          <input type="email" id="email-input" required>
         </div>
       </div>
     </fieldset>
-    <fieldset>
-      <legend class="legend">Informações do mentor</legend>
+    <fieldset id="mentor-info">
+      <legend class="form-legend">Informações do mentor</legend>
 
       <div class="fieldset-elements">
-        <div class="mentor-selection">
+        <div id="mentor-selection">
           <label for="mentor-select">Selecione quem foi o seu mentor:</label>
-          <br>
-          <select name="mentor-select" id="mentor-select">
+          <select name="mentor" id="mentor-select" required>
+            <option value="" selected>-</option>
             <option value="Ken">Ken</option>
             <option value="E-honda">E-honda</option>
             <option value="Ryu">Ryu</option>
@@ -63,17 +63,38 @@
 
         <div class="input-wrapper">
           <label for="mentor-feedback">Feedback sobre o mentor:</label>
-          <textarea name="mentor-feedback" id="mentor-feedback" cols="30" rows="10"></textarea>
+          <textarea name="mentor-feedback" id="mentor-feedback" cols="30" rows="10" required></textarea>
         </div>
 
         <div class="input-wrapper" id="questions-answered-checkbox-div">
-          <input type="checkbox" name="questions-answered" id="questions-answered-checkbox">
-          <label for="questions-answered-checkbox">Todas as minhas dúvidas foram esclarecidas durante a mentoria</label>
+          <input type="checkbox" name="questions-answered" id="questions-answered-checkbox" required>
+          <label for="questions-answered-checkbox">Todas as minhas dúvidas foram esclarecidas durante a mentoria.</label>
         </div>
-
       </div>
-
     </fieldset>
+    <fieldset id="next-mentorship">
+      <legend class="form-legend">Agendando a próxima mentoria</legend>
+
+      <div class="fieldset-elements">
+        <div class="next-schedule">
+          <div id="next-schedule-date">
+            <label for="form-schedule-date">Data <span class="note">(DD/MM/AAAA)</span></label>
+            <input type="date" name="schedule-date" id="form-schedule-date" required>
+          </div>
+          <div id="next-schedule-from">
+            <label for="form-schedule-from">Das</label>
+            <input type="time" name="schedule-from" id="form-schedule-from" required>
+          </div>
+          <div id="next-schedule-to">
+            <label for="form-schedule-to">Até</label>
+            <input type="time" name="schedule-to" id="form-schedule-to" required>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+    <button id="save-btn" type="submit">
+      <p>Salvar</p>
+    </button>
   </form>
 </body>
 </html>
