@@ -10,25 +10,26 @@
   <title>Biscoito da Sorte</title>
 </head>
 <body>
-  <div id="home-screen" class="hide">
+  <div id="home-frame" class="hide">
     <section>
       <h1>Qual é a sua sorte de hoje?</h1>
       <h2>Abra o biscoito e descubra!</h2>
-      <img src="fortune-cookie.svg" alt="um biscoito da sorte">
+      <button id="open-cookie-btn"><img src="fortune-cookie.svg" alt="um biscoito da sorte"></button>
     </section>
   </div>
 
-  <div id="message-screen">
+  <div id="message-frame">
     <section>
       <h1>Aqui está a sua sorte de hoje:</h1>
       <div class="message">
         <p>Se alguém está tão cansado que não possa te dar um sorriso, deixa-lhe o teu.</p>
       </div>
       <img src="opened-cookie.svg" alt="um biscoito da sorte aberto, possibilitando que sua mensagem possa ser lida">
-      <div id="open-cookie">
+      <button id="open-another-cookie-btn">
         <p>Abrir outro biscoito</p>
-      </div>
+      </button>
     </section>
   </div>
+  <script src="script.js"></script>
 </body>
 </html>

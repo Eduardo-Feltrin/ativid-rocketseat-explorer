@@ -18,7 +18,7 @@ body {
   align-items: center;
 }
 
-#home-screen {
+#home-frame {
   margin: 0 auto;
   padding: 4.8rem 6.4rem;
 
@@ -30,13 +30,13 @@ body {
   border-radius: 0.5rem;
 }
 
-#home-screen>section {
+#home-frame>section {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#home-screen h1 {
+#home-frame h1 {
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -48,7 +48,7 @@ body {
   margin-bottom: 1.4rem;
 }
 
-#home-screen h2 {
+#home-frame h2 {
   font-family: 'DM Sans', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -59,7 +59,7 @@ body {
   margin-bottom: 1.4rem;
 }
 
-#message-screen {
+#message-frame {
   margin: 0 auto;
   padding: 4.8rem 6.4rem;
   
@@ -71,7 +71,7 @@ body {
   border-radius: 0.5rem;
 }
 
-#message-screen>section {
+#message-frame>section {
   width: 30.0rem;
   height: 46.8rem;
 
@@ -81,7 +81,7 @@ body {
   gap: 1.7rem;
 }
 
-#message-screen>section>h1 {
+#message-frame>section>h1 {
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -116,8 +116,13 @@ body {
   color: #000000;
 }
 
-#open-cookie {
-  padding: 1.6rem;
+#open-cookie-btn {
+  background: #FFFFFF;
+  border: none;
+}
+
+#open-another-cookie-btn {
+  padding: 1rem;
   gap: 1.0rem;
   
   width: 17.4rem;
@@ -127,7 +132,15 @@ body {
   border-radius: 0.4rem;  
 }
 
-#open-cookie p {
+#open-another-cookie-btn:hover, #open-cookie-btn:hover {
+  cursor: pointer;
+  animation-name: tilt-shaking;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 300ms;
+}
+
+#open-another-cookie-btn p {
   font-family: 'DM Sans', cursive;
   font-style: normal;
   font-weight: 700;
@@ -139,4 +152,12 @@ body {
 
 .hide {
   display: none;
+}
+
+@keyframes tilt-shaking {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0eg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
 }
